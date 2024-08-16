@@ -1,0 +1,30 @@
+// Create SVG element
+const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+svg.setAttribute("width", "200");
+svg.setAttribute("height", "60");
+
+// Create background rectangle
+const bgRect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+bgRect.setAttribute("width", "200");
+bgRect.setAttribute("height", "60");
+bgRect.setAttribute("fill", "#1DB954"); // Spotify green
+svg.appendChild(bgRect);
+
+// Create headphone shape
+const headphone = document.createElementNS("http://www.w3.org/2000/svg", "path");
+headphone.setAttribute("d", "M20 30h20v-5h-7.5C26.5 20 25 17.5 25 15V5h-4v10c0 2.5-1.5 5-4.5 5H5v5h15v5H5v5h15v5H5v5h15V40H5v-5zm150 0h20v-5h-7.5c-3 0-4.5-2.5-4.5-5V5h-4v10c0 2.5-1.5 5-4.5 5H155v5h15v5h-15v5h15v5h-15v5h15V40h-15v-5z");
+headphone.setAttribute("fill", "#fff");
+svg.appendChild(headphone);
+
+// Create "YASH PLAYLIST" text
+const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+text.setAttribute("x", "70");
+text.setAttribute("y", "40");
+text.setAttribute("font-family", "Arial, sans-serif");
+text.setAttribute("font-size", "16");
+text.setAttribute("fill", "#fff");
+text.textContent = "YASH PLAYLIST";
+svg.appendChild(text);
+
+// Append SVG to the body
+document.body.appendChild(svg);
